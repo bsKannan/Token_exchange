@@ -1,10 +1,18 @@
 pragma solidity ^0.4.0;
 contract ERC20
 {
-        string public name = "Token";
-        string public symbol = "$$";
-        uint256 public decimals= 18;
-        uint256 total_Supply;
+    
+        string public name;
+        string public symbol;
+        uint256 public decimals;
+        uint256 public totalSupply;
+        function ERC20()
+        {
+            name="TOKEN";
+            symbol="$$";
+            decimals=18;
+            totalSupply=1000;
+        }
     struct su
     {
         address to;
@@ -12,13 +20,10 @@ contract ERC20
         uint256 amount;
     }
     mapping(address=>su)map;
-    function totalSupply()constant returns(uint256)
-    {
-        return (total_Supply=1000);
-    }
+
     function transfer(address to,uint256 value)returns(bool)
     {
-       require(total_Supply>value);
+       require(totalSupply>value);
        map[msg.sender].amount-=value;
        map[to].value+=value;
        return true;
@@ -29,7 +34,7 @@ contract ERC20
     }
     function mint(uint256 amount) 
     {
-        require(total_Supply>amount);
+        require(totalSupply>amount);
         map[msg.sender].amount=+amount;
     }
 }
