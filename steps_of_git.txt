@@ -1,0 +1,41 @@
+$ cd git(folder name)
+$ ls
+$ git config --global user.name "bsKannan"
+$ git config --global user.email "bskannankanna@gmail.com"
+now we do clone
+$ git clone (url in your github)
+$ls
+your repo
+$ cd repo.name/
+$ls 
+your files show here
+$ git add your new text file
+$ git status
+new file:
+$ git commit -m "first commit" yuor.file.name
+$ git push -u origin master
+$ git status
+Modified
+$ git commit -m "second commit" yuor.file.name
+$ git push -u original master
+$ ls
+list out your files
+
+//here create new folder
+new file add again
+$ git init
+$ git add *
+$ ls
+$ git status
+$ git -m ""commonds" your.file.name
+$ git remote add (remote name)BSK ur url
+$ git remote
+$ git push
+added that new file
+----------------------------------------------------------------------------------------
+
+New branch creations:
+
+$ git checkout -b kannan
+$ git clone "https://github.com/bsKannan/test.git"
+$ git push mnwtest kannan
